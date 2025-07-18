@@ -1,0 +1,71 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+#page1 {
+  height: 100%;
+  width: 100%;
+  background-color: burlywood;
+  display: grid;
+  place-items: center;
+}
+#page2 {
+  height: 100%;
+  width: 100%;
+  background-color: bisque;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#page3 {
+  height: 100%;
+  width: 100%;
+  background-color: lightpink;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#box {
+  height: 200px;
+  width: 200px;
+  background-color: purple;
+}
+
+#page4 {
+  height: 100vh; /* Use vh instead of % for more reliable sizing */
+  width: 100%;
+  position: relative; /* Helps with positioning context */
+  background-color: plum;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+
+  & h1 {
+    font-size: 4rem;
+    color: darkmagenta;
+    position: relative;
+    background-color: rgb(255, 214, 227);
+    padding: 10px;
+  }
+
+  & h2 {
+    font-size: 3rem;
+    color: rebeccapurple;
+    position: relative;
+    background-color: rgb(242, 205, 255);
+    padding: 10px;
+  }
+}
