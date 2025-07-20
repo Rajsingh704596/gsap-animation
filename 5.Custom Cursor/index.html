@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom Cursor animation using GSAP and DOM</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="cursor"></div>
+    <!-- here main page cursor move using gsap -->
+    <div id="main">
+      <div id="image">
+        <!-- case 2 -->
+        <!--problem solve- overlay create which z index high then cursor div so jitter not come and cursor size increase properly  , background m jo image lagayi thi use yaha image tag m use karege  -->
+        <div id="overlay"></div>
+        <img
+          src="https://plus.unsplash.com/premium_photo-1661824165440-4a5198c45e3d?q=80&w=880&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="image overlay"
+        />
+      </div>
+    </div>
+
+    <!--Always use CDN before js file (Must Necessary)-->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+      integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="script.js"></script>
+  </body>
+</html>
