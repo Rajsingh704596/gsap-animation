@@ -1,0 +1,41 @@
+* {
+  margin: 0px;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  gap: 5rem;
+  flex-direction: column;
+}
+
+h1 {
+  font-size: 100px;
+  /* background-color: red; */
+  overflow: hidden;
+
+  & span {
+    display: inline-block; /*so gsap property work*/
+  }
+}
+
+h2 {
+  font-size: 100px;
+  overflow: hidden;
+
+  & span {
+    display: inline-block; /*so gsap property work*/
+  }
+}
