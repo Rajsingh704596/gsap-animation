@@ -2,6 +2,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef, useState } from "react";
 
+gsap.registerPlugin(useGSAP); //^ Registers the useGSAP hook for React integration with automatic cleanup.
+
 const Basics3 = () => {
   const [xValue, setXValue] = useState(0); //useState
   const [rot, setRot] = useState(0);

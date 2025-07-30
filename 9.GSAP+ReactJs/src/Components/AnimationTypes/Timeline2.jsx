@@ -2,6 +2,8 @@ import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";
 
+gsap.registerPlugin(useGSAP); //^ Registers the useGSAP hook for React integration with automatic cleanup.
+
 const Timeline2 = () => {
   const tlRef = useRef(); //^ timeline ref created
 

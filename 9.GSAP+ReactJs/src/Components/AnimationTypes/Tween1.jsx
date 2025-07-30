@@ -7,6 +7,8 @@ import { useRef } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+gsap.registerPlugin(useGSAP); //^ Registers the useGSAP hook for React integration with automatic cleanup.
+
 const Tween1 = () => {
   const headingRef = useRef(null);
   const imageRef = useRef(null);
