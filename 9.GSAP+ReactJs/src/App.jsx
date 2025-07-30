@@ -4,6 +4,7 @@ import Basics3 from "./Components/Basics3";
 import Recommended from "./Components/Recommended";
 import Tween1 from "./Components/AnimationTypes/Tween1";
 import MorphingImage from "./Components/components/MorphingImage";
+import Timeline2 from "./Components/AnimationTypes/Timeline2";
 
 const App = () => {
   return (
@@ -13,8 +14,10 @@ const App = () => {
       <Basics3 /> */}
       {/* <Recommended /> */}
 
-      <Tween1 />
-      <MorphingImage />
+      {/* <Tween1 /> */}
+      {/* <MorphingImage /> */}
+
+      <Timeline2 />
     </main>
   );
 };
