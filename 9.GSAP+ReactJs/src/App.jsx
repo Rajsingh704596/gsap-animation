@@ -5,6 +5,7 @@ import Recommended from "./Components/Recommended";
 import Tween1 from "./Components/AnimationTypes/Tween1";
 import MorphingImage from "./Components/components/MorphingImage";
 import Timeline2 from "./Components/AnimationTypes/Timeline2";
+import EaseAnimation from "./Components/AnimationTypes/Easing3";
 
 const App = () => {
   return (
@@ -17,7 +18,9 @@ const App = () => {
       {/* <Tween1 /> */}
       {/* <MorphingImage /> */}
 
-      <Timeline2 />
+      {/* <Timeline2 /> */}
+
+      <EaseAnimation />
     </main>
   );
 };
