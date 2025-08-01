@@ -6,6 +6,7 @@ import Tween1 from "./Components/AnimationTypes/Tween1";
 import MorphingImage from "./Components/components/MorphingImage";
 import Timeline2 from "./Components/AnimationTypes/Timeline2";
 import EaseAnimation from "./Components/AnimationTypes/Easing3";
+import Stagger4 from "./Components/AnimationTypes/Stagger4";
 
 const App = () => {
   return (
@@ -20,7 +21,9 @@ const App = () => {
 
       {/* <Timeline2 /> */}
 
-      <EaseAnimation />
+      {/* <EaseAnimation /> */}
+
+      <Stagger4 />
     </main>
   );
 };
