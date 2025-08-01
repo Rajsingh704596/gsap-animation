@@ -1,4 +1,6 @@
-//! Stagger Animation -  only apply same element or same class
+//! Stagger Animation -  only apply same element or same class name for multiple items
+//#1 normal configuration
+//#2 advanced configuration
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";

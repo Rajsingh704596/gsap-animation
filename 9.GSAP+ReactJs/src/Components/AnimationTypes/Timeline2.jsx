@@ -1,3 +1,5 @@
+//! Timeline and Controls Both Property used For handle Animation
+
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 import { useRef } from "react";

@@ -1,3 +1,5 @@
+//! Ease Animation all method use - 1. Core   2. EasePack Plugin     3. Custom Extra Ease Plugin
+
 import { useRef, useState } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
