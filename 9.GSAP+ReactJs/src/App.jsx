@@ -8,6 +8,7 @@ import Timeline2 from "./Components/AnimationTypes/Timeline2";
 import EaseAnimation from "./Components/AnimationTypes/Easing3";
 import Stagger4 from "./Components/AnimationTypes/Stagger4";
 import ScrollTrigger5 from "./Components/AnimationTypes/ScrollTrigger5";
+import ScrollBasedImageSwap from "./Components/components/ScrollBasedImageSwap";
 
 const App = () => {
   return (
@@ -26,7 +27,9 @@ const App = () => {
 
       {/* <Stagger4 /> */}
 
-      <ScrollTrigger5 />
+      {/* <ScrollTrigger5 /> */}
+
+      <ScrollBasedImageSwap />
     </main>
   );
 };
