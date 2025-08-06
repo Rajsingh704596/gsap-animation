@@ -10,6 +10,7 @@ import Stagger4 from "./Components/AnimationTypes/Stagger4";
 import ScrollTrigger5 from "./Components/AnimationTypes/ScrollTrigger5";
 import ScrollBasedImageSwap from "./Components/components/ScrollBasedImageSwap";
 import ScrollTo6 from "./Components/AnimationTypes/ScrollTo6";
+import ScrollSmoother7 from "./Components/AnimationTypes/ScrollSmoother7";
 
 const App = () => {
   return (
@@ -32,7 +33,9 @@ const App = () => {
 
       {/* <ScrollBasedImageSwap /> */}
 
-      <ScrollTo6 />
+      {/* <ScrollTo6 /> */}
+
+      <ScrollSmoother7 />
     </main>
   );
 };
