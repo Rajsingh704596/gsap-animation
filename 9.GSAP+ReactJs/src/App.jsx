@@ -11,6 +11,7 @@ import ScrollTrigger5 from "./Components/AnimationTypes/ScrollTrigger5";
 import ScrollBasedImageSwap from "./Components/components/ScrollBasedImageSwap";
 import ScrollTo6 from "./Components/AnimationTypes/ScrollTo6";
 import ScrollSmoother7 from "./Components/AnimationTypes/ScrollSmoother7";
+import FullPageParallaxSnap from "./Components/components/FullPageParallaxScrollSections";
 
 const App = () => {
   return (
@@ -35,7 +36,8 @@ const App = () => {
 
       {/* <ScrollTo6 /> */}
 
-      <ScrollSmoother7 />
+      {/* <ScrollSmoother7 /> */}
+      <FullPageParallaxSnap />
     </main>
   );
 };
