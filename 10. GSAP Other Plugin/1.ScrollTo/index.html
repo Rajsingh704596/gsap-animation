@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>GSAP ScrollTo plugin</title>
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        scroll-behavior: auto; /* IMPORTANT */
+        font-family: sans-serif;
+      }
+
+      nav {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background: #333;
+        padding: 10px;
+        z-index: 100;
+        text-align: center;
+      }
+
+      nav button {
+        margin: 0 10px;
+        padding: 10px 20px;
+        color: white;
+        background: #555;
+        border: none;
+        cursor: pointer;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: white;
+        margin: 4px;
+        padding: 10px 20px;
+        display: inline-block;
+        position: relative;
+        transition: all 0.3s ease-in-out;
+        border-radius: 4px;
+      }
+
+      nav a:hover {
+        color: #ffd;
+        background-color: rgba(255, 255, 255, 0.1);
+        text-decoration: none;
+      }
+
+      nav a:focus {
+        outline: none; /* remove default */
+        background-color: #555;
+        color: #87cefa;
+        box-shadow: 0 0 0 3px rgba(100, 149, 237, 0.5); /* focus ring */
+        text-decoration: underline;
+      }
+
+      section {
+        height: 100vh;
+        padding-top: 60px; /* space for nav */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2em;
+        color: white;
+      }
+
+      #section1 {
+        background: #1abc9c;
+      }
+      #section2 {
+        background: #3498db;
+      }
+      #section3 {
+        background: #9b59b6;
+      }
+      #section4 {
+        background: #b6598c;
+      }
+      #section5 {
+        background: #7259b6;
+      }
+      #section6 {
+        background: #64b659;
+      }
+      #section7 {
+        background: #59b65e;
+      }
+    </style>
+  </head>
+  <body>
+    <nav>
+      <!-- Using buttons -->
+      <button type="button" onclick="scrollToSection('#section1')">
+        <!--type button prevent accidental form submission -->
+        Section 1
+      </button>
+      <button onclick="scrollToSection('#section2')">Section 2</button>
+      <button onclick="scrollToSection('#section3')">Section 3</button>
+
+      <!-- Using links -->
+      <a href="#section4" class="scroll-link">Section 4</a>
+      <a href="#section5" class="scroll-link">Section 5</a>
+      <a href="#section6" class="scroll-link">Section 6</a>
+      <a href="#section7">Section 7</a>
+    </nav>
+
+    <!-- particular section/page which is show based on scroll when click button or anchor (link) -->
+    <section id="section1">Section 1</section>
+    <section id="section2">Section 2</section>
+    <section id="section3">Section 3</section>
+    <section id="section4">Section 4</section>
+    <section id="section5">Section 5</section>
+    <section id="section6">Section 6</section>
+    <section id="section7">Section 7</section>
+
+    <!-- GSAP & ScrollToPlugin via CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollToPlugin.min.js"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // Register the plugin
+        gsap.registerPlugin(ScrollToPlugin);
+
+        //1. For All Button
+        // Make scrollToSection function globally available so we use window.scrollToSection  , if we not put inside DOMContentLoaded so we can directly use function
+        window.scrollToSection = function (target) {
+          gsap.to(window, {
+            // here window means pure window ko scroll karega
+            duration: 1.2,
+            scrollTo: {
+              y: target, // y axis pr scroll hote hai target id tk le jaye
+              offsetY: 50,
+            },
+            ease: "power2.out",
+          });
+        };
+
+        //2. for All Link anchor tag
+        // Handle all <a> links with .scroll-link class
+        const scrollLinks = document.querySelectorAll("a.scroll-link");
+
+        scrollLinks.forEach((link) => {
+          link.addEventListener("click", function (e) {
+            e.preventDefault(); // prevent default jump
+            const target = this.getAttribute("href"); // id get using href
+            scrollToSection(target); // fun call where scrollTo properties define
+          });
+        });
+
+        //3. for handle single link
+        document
+          .querySelector("a[href='#section7']")
+          .addEventListener("click", function (e) {
+            e.preventDefault();
+
+            gsap.to(window, {
+              duration: 1,
+              scrollTo: {
+                y: "#section7",
+                offsetY: 20, // it means 20px more scroll
+              },
+            });
+          });
+
+        // Optional global config (not mandatory)
+        ScrollToPlugin.config({
+          autoKill: true, // Default is already true         // Animation stop when user scroll manually
+        });
+      });
+    </script>
+  </body>
+</html>
