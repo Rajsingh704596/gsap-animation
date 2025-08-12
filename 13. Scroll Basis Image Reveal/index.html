@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      GSAP Scroll-Triggered Mask Reveal with SVG , and inside svg show image
+    </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <h1>Scroll Reveal Animation using SVG Mask and GSAP</h1>
+
+      <div class="svg">
+        <!-- image we pass background image -->
+        <div class="img">
+          <!-- inside image another image show  -->
+          <div class="svg2">
+            <div class="img2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- gsap cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- scrollTrigger plugin cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
