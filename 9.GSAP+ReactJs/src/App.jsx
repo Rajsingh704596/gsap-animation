@@ -13,6 +13,7 @@ import ScrollTo6 from "./Components/AnimationTypes/ScrollTo6";
 import ScrollSmoother7 from "./Components/AnimationTypes/ScrollSmoother7";
 import FullPageParallaxSnap from "./Components/components/FullPageParallaxScrollSections";
 import SVGBasedMouseDrivenMaskRevealEffect from "./Components/components/4. SVG-Based Mouse Driven Mask Reveal Effect/SVGBasedMouseDrivenMaskRevealEffect";
+import ScrollBasedRevealAnimationusingSVGMask from "./Components/components/5. ScrollBasedRevealAnimationusingSVG Mask/ScrollBasedRevealAnimationusingSVGMask";
 
 const App = () => {
   return (
@@ -40,7 +41,9 @@ const App = () => {
       {/* <ScrollSmoother7 /> */}
       {/* <FullPageParallaxSnap /> */}
 
-      <SVGBasedMouseDrivenMaskRevealEffect />
+      {/* <SVGBasedMouseDrivenMaskRevealEffect /> */}
+
+      <ScrollBasedRevealAnimationusingSVGMask />
     </main>
   );
 };
