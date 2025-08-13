@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      Text Reveal Effect using GSAP ScrollTrigger and SmoothScroll plugin
+    </title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="smooth-wrapper">
+      <div id="smooth-content">
+        <div id="main">
+          <div class="firstpage">
+            <h1>Scroll Down ⏬</h1>
+          </div>
+          <div class="secondpage">
+            <!-- First Animation -->
+            <div class="text-area-behind">
+              <h1>
+                Rock Full Stack Web Developer | <br />MERN Stack | Next Js
+              </h1>
+            </div>
+            <div class="text-area-front">
+              <h1>
+                Rock Full Stack Web Developer | <br />MERN Stack | Next Js
+              </h1>
+            </div>
+          </div>
+          <div class="thirdpage">
+            <!-- Second Animation -->
+            <div class="text-area-1">
+              <h1>Rock Full Stack Web Developer</h1>
+              <h2>MERN Stack | Next Js</h2>
+            </div>
+            <div class="text-area-2">
+              <h1>Rock Full Stack Web Developer</h1>
+              <h2>MERN Stack | Next Js</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- gsap plugin cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <!-- scrollTrigger plugin cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <!-- ScrollSmoother Plugin requires ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
+
+    <script src="script.js"></script>
+  </body>
+</html>
