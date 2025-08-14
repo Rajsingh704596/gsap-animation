@@ -14,6 +14,7 @@ import ScrollSmoother7 from "./Components/AnimationTypes/ScrollSmoother7";
 import FullPageParallaxSnap from "./Components/components/FullPageParallaxScrollSections";
 import SVGBasedMouseDrivenMaskRevealEffect from "./Components/components/4. SVG-Based Mouse Driven Mask Reveal Effect/SVGBasedMouseDrivenMaskRevealEffect";
 import ScrollBasedRevealAnimationusingSVGMask from "./Components/components/5. ScrollBasedRevealAnimationusingSVG Mask/ScrollBasedRevealAnimationusingSVGMask";
+import TextRevealAnimation from "./Components/components/6. Text Reveal based on Scroll/ScrollBasedTextRevealAnimation";
 
 const App = () => {
   return (
@@ -43,7 +44,9 @@ const App = () => {
 
       {/* <SVGBasedMouseDrivenMaskRevealEffect /> */}
 
-      <ScrollBasedRevealAnimationusingSVGMask />
+      {/* <ScrollBasedRevealAnimationusingSVGMask /> */}
+
+      <TextRevealAnimation />
     </main>
   );
 };
