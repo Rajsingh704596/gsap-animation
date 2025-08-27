@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  height: 100vh;
+  background: #f0f6ce;
+  color: #f0f6ce;
+  display: grid;
+  place-content: center;
+}
+
+.container {
+  border-radius: 50%;
+  background: #ce5700;
+  width: 10rem;
+  height: 14rem;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+p {
+  font-size: clamp(4rem, 4vw, 8rem); /* clamp(minimum, preferred, maximum)
+ */
+  transform: translateX(30%);
+}
